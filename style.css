@@ -63,6 +63,7 @@ main {
   top: 0;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 #image-logo {
   height: 76px;
@@ -112,6 +113,8 @@ form {
   height: 156px;
   letter-spacing: 0px;
   bottom: calc(26.5% - 0%);
+  min-width: 350px;
+  z-index: 2;
 }
 
 .input-field {
@@ -155,7 +158,6 @@ form {
 /* Comienzo del estilado del botón de ingreso y el link para recuperar contraseña */
 #btn {
   position: absolute;
-  
   background: #DD3542 0% 0% no-repeat padding-box;
   border-radius: 24px;
   font-family: 'Open Sans', sans-serif;
@@ -164,6 +166,7 @@ form {
   width: 174px;
   height: 48px;
   bottom: 44px;
+  z-index: 3;
 }
 
 #btn-span {
@@ -197,6 +200,7 @@ form {
   bottom: 0;
   height: 16px;
   width: 336px;
+  z-index: 4;
 }
 
 
@@ -240,3 +244,30 @@ form {
 
 /*  Media Queries*/
 
+
+/* Incrementa el alto cuando el viewport es 800px */
+@media (max-height: 800px) {
+  main {
+    height: 65vh;
+  }
+}
+
+/* Incrementa el alto cuando el viewport es 700px */
+@media (max-height: 700px) {
+  main {
+    height: 75vh;
+  }
+}
+
+/* Incrementa el alto cuando el viewport es 600px */
+@media (max-height: 600px) {
+  main {
+    height: 85vh;
+  }
+}
+
+@media (max-height: 500px) {
+  main {
+    height: 85vh;
+  }
+}
