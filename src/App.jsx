@@ -20,21 +20,21 @@ export default function App () {
             Sufipay
           </h2>
           <h3 id='sub-title'>
-            administrador comercial
+            Administrador comercial
           </h3>
         </div>
         <form>
-          <fieldset className='input-field'>
-            <label className='label-form'>
+          <fieldset className='input-field' id='user-field'>
+            <label htmlFor='username' className='label-form'>
               Usuario
-              <input type='email' id='username' placeholder='username' required />
             </label>
+            <input className='text-input' type='email' id='username' placeholder='mail@usermail.com' required />
           </fieldset>
-          <fieldset className='input-field'>
-            <label className='label-form'>
+          <fieldset className='input-field' id='password-field'>
+            <label htmlFor='password' className='label-form'>
               Contraseña
-              <input type='password' id='password' placeholder='contraseña' required />
             </label>
+            <input className='text-input' type='password' id='password' placeholder='contraseña' required />
           </fieldset>
         </form>
         <button type='submit' id='btn'>

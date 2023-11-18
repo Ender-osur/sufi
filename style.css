@@ -41,7 +41,6 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: #413E4D solid 1px;
   align-items: center;
   justify-content: center;
 }
@@ -56,77 +55,107 @@ main {
 
 /*  Comienzo del estilado del Header que contiene logo, título y subtitulo*/
 #header {
-  opacity: 0;
-}
-
-#image-logo-container {
-  display: inline-block;
-  height: 9.5vh;
-  width: 20.56vw;
-}
-
-#image-logo {
-  width: 100%;
-  height: auto;
-  background: transparent 0% 0% no-repeat padding-box;
+  position: fixed;
   opacity: 1;
-}
-
-#title {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   color: var(---413e4d-input-color);
-  text-align: center;
-  opacity: 1;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+#image-logo {
+  height: 76px;
+  width: auto;
+  margin: 0;
+}
+#title {
   font-weight: bold;
   font-style: normal;
   letter-spacing: 0px;
   line-height: 55px;
   font-size: 40px;
+  height: 48px;
+  width: 368px;
+  margin: 12px 16px 8px 16px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
-
 #sub-title {
-  position: absolute;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(---413e4d-input-color);
   text-align: center;
   letter-spacing: 0px;
-  opacity: 1;
   font-weight: normal;
   font-style: normal;
+  line-height: 22px;
+  font-size: 16px;
+  height: 20px;
+  width: 368px;
+  margin: 0px 16px auto 16px;
+  font-family: 'Open Sans', sans-serif;
 }
-
 
 /*  Comienzo del estilado del contenedor de los diferentes inputs del formulario*/
 form {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  
   position: absolute;
-  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 16px #00000029;
   border-radius: 12px;
-  opacity: 1;
   padding: 16px;
+  width: 100%;
+  height: 156px;
+  letter-spacing: 0px;
+  bottom: calc(26.5% - 0%);
+}
 
-  display: flex;
-  flex-direction: column;
+.input-field {
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid var(--azul-plomo-50-);
+}
+
+#user-field {
+  margin-bottom: 6px;
+}
+
+#password-field {
+  margin-top: 6px;
 }
 
 .label-form {
   color: var(--azul-plomo);
   text-align: left;
-  font: normal normal normal 12px/22px;
-  letter-spacing: 0px;
   color: #ABB9C7;
+  font-size: 12px;
   opacity: 1;
   display: flex;
   flex-direction: column;
+  margin: 8px 16px 4px 16px;
 }
 
+.text-input {
+  height: 20px;
+  border: 0;
+  padding: 4px 16px 8px 16px;
+  margin:0;
+  box-sizing: border-box;
+  width: 100%; 
+  font-size: 16px;
+  color: #413E4D;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
 
 /* Comienzo del estilado del botón de ingreso y el link para recuperar contraseña */
 #btn {
   position: absolute;
-  background: var(--red_1_-dd3542) 0% 0% no-repeat padding-box;
+  
   background: #DD3542 0% 0% no-repeat padding-box;
   border-radius: 24px;
   font-family: 'Open Sans', sans-serif;
