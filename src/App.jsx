@@ -25,20 +25,20 @@ export default function App () {
         </div>
         <form>
           <fieldset className='input-field'>
-            <label>
+            <label className='label-form'>
               Usuario
               <input type='email' id='username' placeholder='username' required />
             </label>
           </fieldset>
           <fieldset className='input-field'>
-            <label>
+            <label className='label-form'>
               Contraseña
               <input type='password' id='password' placeholder='contraseña' required />
             </label>
           </fieldset>
         </form>
         <button type='submit' id='btn'>
-          <span id='btn-span'>Ingresar</span>
+          <div id='btn-span'>INGRESAR</div>
         </button>
         <a href='#' id='recovery-field'>
           No recuerdo mi contraseña

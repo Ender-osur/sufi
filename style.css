@@ -4,18 +4,8 @@
   box-sizing: border-box;
 }
 
-
+/* Algunas variables sacadas de la prueba y otras realizadas según las necesidades*/
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
     /* Colors: */
   --blue_3_-f1f6fb: #F1F6FB;
@@ -30,21 +20,6 @@
   --azul-plomo-50-: #ABB9C780;
   ---413e4d-input-color: #413E4D;
 
-  /* Font/text values */
-  --unnamed-font-family-open-sans: Open Sans;
-  --unnamed-font-family-lato: Lato;
-  --unnamed-font-style-normal: normal;
-  --unnamed-font-weight-900: 900px;
-  --unnamed-font-weight-bold: bold;
-  --unnamed-font-weight-normal: normal;
-  --unnamed-font-size-14: 14px;
-  --unnamed-font-size-16: 16px;
-  --unnamed-font-size-22: 22px;
-  --unnamed-character-spacing-0: 0px;
-  --unnamed-line-spacing-19: 19px;
-  --unnamed-line-spacing-22: 22px;
-  --unnamed-line-spacing-27: 27px;
-
   /* Ratios para imágenes */
   --ratio-triag: 720/703;
   --ratio-elipse: 1/1;
@@ -52,117 +27,187 @@
   --ratio-logo: 143/41;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Contenedor del formulario.  */
 main {
   height: 59.5vh;
   width: 31.25vw;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: #413E4D solid 1px;
+  align-items: center;
+  justify-content: center;
 }
 
+/*  Contenedor de las imágenes que estarán de fondo de la Login Page*/
 .images {
   display: flex;
   position: fixed;
   overflow: hidden;
 }
 
-#image-logo {
-  min-height: 9.5vh;
-  max-height: 9.5vh;
-  aspect-ratio: var(--ratio-logo);
+
+/*  Comienzo del estilado del Header que contiene logo, título y subtitulo*/
+#header {
+  opacity: 0;
 }
 
-#title {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 40px/55px var(--unnamed-font-family-open-sans);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(---413e4d-input-color);
-  text-align: center;
-  font: normal normal bold 40px/55px Open Sans;
-  letter-spacing: 0px;
-  color: #413E4D;
+#image-logo-container {
+  display: inline-block;
+  height: 9.5vh;
+  width: 20.56vw;
+}
+
+#image-logo {
+  width: 100%;
+  height: auto;
+  background: transparent 0% 0% no-repeat padding-box;
   opacity: 1;
 }
 
+#title {
+  position: absolute;
+  color: var(---413e4d-input-color);
+  text-align: center;
+  opacity: 1;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 55px;
+  font-size: 40px;
+}
+
 #sub-title {
+  position: absolute;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(---413e4d-input-color);
   text-align: center;
-  font: normal normal normal 16px/22px Open Sans;
   letter-spacing: 0px;
-  color: #413E4D;
   opacity: 1;
+  font-weight: normal;
+  font-style: normal;
 }
 
+
+/*  Comienzo del estilado del contenedor de los diferentes inputs del formulario*/
 form {
+  position: absolute;
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 16px #00000029;
   border-radius: 12px;
   opacity: 1;
   padding: 16px;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.label-form {
+  color: var(--azul-plomo);
+  text-align: left;
+  font: normal normal normal 12px/22px;
+  letter-spacing: 0px;
+  color: #ABB9C7;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Comienzo del estilado del botón de ingreso y el link para recuperar contraseña */
 #btn {
+  position: absolute;
   background: var(--red_1_-dd3542) 0% 0% no-repeat padding-box;
   background: #DD3542 0% 0% no-repeat padding-box;
   border-radius: 24px;
-  opacity: 1
+  font-family: 'Open Sans', sans-serif;
+  opacity: 1;
+  border: 0;
+  width: 174px;
+  height: 48px;
+  bottom: 44px;
 }
 
 #btn-span {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
-  letter-spacing: var(--unnamed-character-spacing-0);
+  inset: 0;
+  margin: auto;
+  width: 126px;
+  height: 20px;
   color: var(--white_-ffffff);
   text-align: center;
-  font: normal normal bold 16px/22px Open Sans;
   letter-spacing: 0px;
   color: #FFFFFF;
   opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 #recovery-field {
-
+  position: absolute;
+  color: var(---413e4d-input-color);
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 0px;
+  color: #413E4D;
+  opacity: 1;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 17px;
+  bottom: 0;
+  height: 16px;
+  width: 336px;
 }
 
+
+/*  Comienzo de estilado para el fondo de la Login Page con la diferentes imágenes sumistradas por el ejercicio*/
 #punto-der {
-  top: 72vh;
-  left: 69.5vw;
+  top: 78vh;
+  left: 69vw;
   aspect-ratio: var(--ratio-elipse);
 }
 
 #punto-izq {
-  top: 38vh;
-  left: 24vw;
+  top: 33vh;
+  left: 25.5vw;
   aspect-ratio: var(--ratio-elipse);
 }
 
 #elipse-der {
-  top: 63vh;
-  left: 75vw;
+  top: 67vh;
+  left: 79vw;
   aspect-ratio: var(--ratio-elipse);
 }
 
 #elipse-izq {
-  top: 50vh;
-  left: 20vw;
+  top: 49vh;
+  left: 20.5vw;
   aspect-ratio: var(--ratio-elipse);
 }
 
-#triag-der {
-  width: 50vw;
-  top: 55vh;
-  left: -10vw;
+#triag-izq {
+  width: 54vw;
+  top: 53vh;
+  left: -10.5vw;
   aspect-ratio: var(--ratio-triag);
 }
-#triag-izq {
-  width: 50vw;
+#triag-der {
+  width: 53vw;
   top: -15vh;
   left: 70vw;
   aspect-ratio: var(--ratio-triag);
 }
+
+/*  Media Queries*/
 
