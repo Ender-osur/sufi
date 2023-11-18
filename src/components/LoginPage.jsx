@@ -13,7 +13,7 @@ export default function LoginPage () {
       </div>
       <main>
         <div id='header'>
-          <a id='image-logo-container' href='#'>
+          <a id='container-image-logo' href='#'>
             <img id='image-logo' src='src\assets\sufi_iconX2.png' alt='sufi' />
           </a>
           <h2 id='title'>
@@ -23,23 +23,25 @@ export default function LoginPage () {
             Administrador comercial
           </h3>
         </div>
-        <form>
-          <fieldset className='input-field' id='user-field'>
-            <label htmlFor='username' className='label-form'>
-              Usuario
-            </label>
-            <input className='text-input' type='email' id='username' placeholder='mail@usermail.com' required />
-          </fieldset>
-          <fieldset className='input-field' id='password-field'>
-            <label htmlFor='password' className='label-form'>
-              Contraseña
-            </label>
-            <input className='text-input' type='password' id='password' placeholder='contraseña' required />
-          </fieldset>
+        <form id='myForm'>
+          <div id='container-inputs'>
+            <fieldset className='input-field' id='user-field'>
+              <label htmlFor='username' className='label-form'>
+                Usuario
+              </label>
+              <input className='text-input' type='email' id='username' placeholder='mail@usermail.com' required />
+            </fieldset>
+            <fieldset className='input-field' id='password-field'>
+              <label htmlFor='password' className='label-form'>
+                Contraseña
+              </label>
+              <input className='text-input' type='password' id='password' placeholder='contraseña' required />
+            </fieldset>
+          </div>
+          <button type='submit' id='btn'>
+            <span id='btn-span'>INGRESAR</span>
+          </button>
         </form>
-        <button type='submit' id='btn'>
-          <div id='btn-span'>INGRESAR</div>
-        </button>
         <a href='#' id='recovery-field'>
           No recuerdo mi contraseña
         </a>
