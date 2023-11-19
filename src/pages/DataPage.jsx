@@ -6,7 +6,7 @@ import '../styles/dataPage.css'
 export default function DataPage () {
   return (
     <div id='container-datapage'>
-      <header id='container-top'>
+      <header className='container-header-nav'>
         <nav class='navbar'>
           <a href='#' id='container-logo'>
             <img src='src/assets/sufi_icon.png' alt='icon' />
@@ -16,14 +16,14 @@ export default function DataPage () {
             <FontAwesomeIcon icon={faSignOut} />
           </a>
         </nav>
-        <section>
+        <section className='container-header-desembolsos'>
           <h1 id='title-datapage'>Mis desembolsos</h1>
           <a href='#' id='container-button'>
             <FontAwesomeIcon icon={faDownload} />
             <span>Descargar</span>
           </a>
         </section>
-        <section>
+        <section className='container-filters'>
           <div className='filter'>
             <input id='filter-1' type='text' placeholder=' ' />
             <label htmlFor='filter-1'><FontAwesomeIcon icon={faAngleDown} />Tipo doc.</label>
@@ -46,10 +46,7 @@ export default function DataPage () {
           </div>
         </section>
       </header>
-      <div>
-        hola
-      </div>
-      <main>
+      <main className='container-table'>
         <table class='table'>
           <thead>
             <tr>
