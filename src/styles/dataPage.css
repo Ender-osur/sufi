@@ -4,16 +4,228 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: transparent;
-
+/* Variables útiles para estilar tomadas de la prueba*/
+:root {
+    --blue_3_-f1f6fb: #F1F6FB;
+    --green_1_-00e022: #00E022;
+    --red_1_-dd3542: #DD3542;
+    --gray_1_-8e8e8e: #8E8E8E;
+    --gray_2_-dedede: #DEDEDE;
+    --gray_3_-cccccc-button-off: #CCCCCC;
+    --gray_4_registros_-f7f7f7: #F7F7F7;
+    --white_-ffffff: #FFFFFF;
+    --azul-plomo: #ABB9C7;
+    --azul-plomo-50-: #ABB9C780;
+    ---413e4d-input-color: #31323F;
 }
 
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+/*-------------------------------------------------------------------------*/
+/* Comienzo del estilado del navbar */
+
+/*  Haciendo uso de grid para centrar el logo y dejar a la derecha del navbar el boton de logout*/
 nav {
-    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    align-items: center;
+    height: 72px;
+}
+
+a#container-logo {
+    grid-column: 2;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    height: 48px;
+    width: 128px;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    margin-top: 12px;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-left: auto;
+}
+
+#container-logo img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+#container-logout {
+    justify-content: center;
+    width: 156px;
+    height: 48px;
+    grid-column: 3;
+    display: flex;
+    justify-self: right;
+    align-items: center;
+    text-decoration: none;
+    color: var(---413e4d-input-color);
+    margin-right: 12px;
+}
+
+#container-logout span {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+/*-------------------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------------------------*/
+/* Comienzo de estilado del segundo contenedor: titulo y botón de descargas*/
+
+.container-header-desembolsos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    width: 100%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+#title-datapage {
+    height: 24px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: auto auto auto 72px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#container-button {
+    height: 48px;
+    width: 176px;
+    margin: 20px 72px 20px auto;
+    background: var(--red_1_-dd3542) 0% 0% no-repeat padding-box;
+    border-radius: 24px;
+    opacity: 1;
+    text-decoration: none;
+    color:#FFFFFF;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#container-button span {
+    margin: 14px 24px 14px auto;
+    height: 20px;
+    width: 119px;
+    font-size: 14px;
+    font-weight: bold;
+}
+/*-------------------------------------------------------------------------*/
+
+
+
+/*------------------------------*/
+/*  Estilado de íconos*/
+
+.icons {
+    height: 24px;
+    width: 24px;
+}
+
+#icon-dl {
+    margin: 12px auto 12px 12px;
+}
+
+#icon-lo {
+    margin: 24px 12px 24px auto;
+}
+
+#icon-al, #icon-cl {
+    color: var(--red_1_-dd3542);
+}
+/*-----------------------------*/
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+/*  Comienzo de estilado de los filtros */
+.container-filters {
+    display: flex;
+    height: 88px;
+    width: 100%;
+    justify-content: space-between;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    align-items: center;
+}
+
+.filters {
+    height: 56px;
+    border: 1px solid #ABB9C780;
+    border-radius: 6px;
+    opacity: 1;
+
+}
+.filters:nth-child(1) {
+    width: 24px;
+    height: 24px;
+    position: fixed;
+}
+
+.filters:nth-child(2) {
+    width: 176px;
+    margin-left: 72px;
+}
+
+.filters:nth-child(3) {
+    width: 272px;
+}
+
+.filters:nth-child(4) {
+    width: 272px;
+}
+
+.filters:nth-child(5) {
+    width: 176px;
+}
+.filters:nth-child(6) {
+    width: 176px;
+    margin-right: 72px;
 }
 
 
+.filters input {
+    border: 0;
+    
+}
+
+.filters label  {
+    top: 18px;
+    left: 20px;
+    color: #ABB9C7;
+    opacity: 1;
+    letter-spacing: 0;
+    font-size: 16px;
+    line-height: 22px;
+    justify-self: left;
+
+}
+/*-------------------------------------------------------------------------*/
+
+
+
+
+.container-table {
+    display: none;
+    
+}
 
