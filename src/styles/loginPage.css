@@ -1,0 +1,283 @@
+:root {
+
+    /* Colors: */
+  --blue_3_-f1f6fb: #F1F6FB;
+  --green_1_-00e022: #00E022;
+  --red_1_-dd3542: #DD3542;
+  --gray_1_-8e8e8e: #8E8E8E;
+  --gray_2_-dedede: #DEDEDE;
+  --gray_3_-cccccc-button-off: #CCCCCC;
+  --gray_4_registros_-f7f7f7: #F7F7F7;
+  --white_-ffffff: #FFFFFF;
+  --azul-plomo: #ABB9C7;
+  --azul-plomo-50-: #ABB9C780;
+  ---413e4d-input-color: #413E4D;
+
+  /* Ratios para imágenes */
+  --ratio-triag: 720/703;
+  --ratio-elipse: 1/1;
+  --ratio-punto: 61/23;
+  --ratio-logo: 143/41;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Algunas variables sacadas de la prueba y otras realizadas según las necesidades*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Contenedor del formulario.  */
+main {
+  height: 59.5vh;
+  width: 31.25vw;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+}
+
+/*  Contenedor de las imágenes que estarán de fondo de la Login Page*/
+.images {
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+}
+
+
+/*  Comienzo del estilado del Header que contiene logo, título y subtitulo*/
+#header {
+  position: fixed;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(---413e4d-input-color);
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  
+}
+#image-logo {
+  height: 76px;
+  width: auto;
+  margin: 0;
+}
+#title {
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 55px;
+  font-size: 40px;
+  height: 48px;
+  width: 368px;
+  margin: 12px 16px 8px 16px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+#sub-title {
+  text-align: center;
+  letter-spacing: 0px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 22px;
+  font-size: 16px;
+  height: 20px;
+  width: 368px;
+  margin: 0px 16px 0px 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*  Comienzo del estilado del contenedor de los diferentes inputs del formulario y el botón*/
+form {
+  opacity: 1; 
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0px;
+  bottom: calc(26.5% - 0%);
+  min-width: 350px;
+  z-index: 2;
+  align-items: center;
+  top: 196px;
+  bottom: 124px;
+  
+}
+
+#container-inputs {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 16px #00000029;
+  border-radius: 12px;  
+  padding: 16px;
+  min-width: 368px;
+  min-height: 156px;
+  z-index: 1;
+}
+
+
+.input-field {
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid var(--azul-plomo-50-);
+  min-width: 368px;
+  padding-bottom: 8px;
+}
+
+#user-field {
+  margin-bottom: 12px;
+}
+
+#password-field {
+  margin-top: 12px;
+}
+
+.label-form {
+  color: var(--azul-plomo);
+  text-align: left;
+  color: #ABB9C7;
+  font-size: 12px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 8px 16px 4px 16px;
+}
+
+.text-input {
+  height: 20px;
+  border: 0;
+  padding: 4px 0px 0px 0px;
+  margin: 0 16px 0px 16px;
+  box-sizing: border-box;
+  width: calc(100% - 32px); 
+  font-size: 16px;
+  color: #413E4D;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+
+#btn {
+  position: fixed;
+  background: #DD3542 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  font-family: 'Open Sans', sans-serif;
+  opacity: 1;
+  border: 0;
+  width: 174px;
+  height: 48px;
+  bottom: 44px;
+  z-index: 2;
+}
+
+
+/* Comienzo del link para recuperar contraseña */
+
+
+#btn-span {
+  width: 126px;
+  height: 20px;
+  color: var(--white_-ffffff);
+  text-align: center;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+#recovery-field {
+  position: absolute;
+  color: var(---413e4d-input-color);
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 0px;
+  color: #413E4D;
+  opacity: 1;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 17px;
+  bottom: 0;
+  height: 16px;
+  width: 336px;
+  z-index: 3;
+}
+
+
+/*  Comienzo de estilado para el fondo de la Login Page con la diferentes imágenes sumistradas por el ejercicio*/
+#punto-der {
+  top: 78vh;
+  left: 69vw;
+  aspect-ratio: var(--ratio-elipse);
+}
+
+#punto-izq {
+  top: 33vh;
+  left: 25.5vw;
+  aspect-ratio: var(--ratio-elipse);
+}
+
+#elipse-der {
+  top: 67vh;
+  left: 79vw;
+  aspect-ratio: var(--ratio-elipse);
+}
+
+#elipse-izq {
+  top: 49vh;
+  left: 20.5vw;
+  aspect-ratio: var(--ratio-elipse);
+}
+
+#triag-izq {
+  width: 54vw;
+  top: 53vh;
+  left: -10.5vw;
+  aspect-ratio: var(--ratio-triag);
+}
+#triag-der {
+  width: 53vw;
+  top: -15vh;
+  left: 70vw;
+  aspect-ratio: var(--ratio-triag);
+}
+
+/*  Media Queries*/
+
+
+/* Incrementa el alto cuando el viewport es 800px */
+@media (max-height: 800px) {
+  main {
+    height: 65vh;
+  }
+}
+
+/* Incrementa el alto cuando el viewport es 700px */
+@media (max-height: 700px) {
+  main {
+    height: 75vh;
+  }
+}
+
+/* Incrementa el alto cuando el viewport es 600px */
+@media (max-height: 600px) {
+  main {
+    height: 85vh;
+  }
+}
+
+@media (max-height: 500px) {
+  main {
+    height: 85vh;
+  }
+}
