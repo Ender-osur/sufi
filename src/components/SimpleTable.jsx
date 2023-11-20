@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import { API_DATA } from '../utils/Constants'
+import '../styles/SimpleTable.css'
 
 const SimpleTable = () => {
   // Hooks

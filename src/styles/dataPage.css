@@ -164,6 +164,14 @@ a#container-logo {
     color: var(--red_1_-dd3542);
 }
 
+#icon-cl {
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    left: 28px;
+    top: 192px;
+}
+
 #icon-al, #icon-cal1, #icon-cal2 {
     position: absolute;
     grid-column: 4;
