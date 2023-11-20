@@ -1,0 +1,13 @@
+
+#container-pagination {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+
+}
+
+#container-pagination button{
+    height: 24px;
+    width: 24px;
+}

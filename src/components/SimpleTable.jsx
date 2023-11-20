@@ -36,7 +36,7 @@ export default function SimpleTable () {
                   <tr key={headerGroup.date}>
                     {
                             headerGroup.headers.map(header => (
-                              <th key={header.date}>
+                              <th key={header.id}>
                                 {flexRender(header.column.columnDef.header, header.getContext())}
                               </th>
                             ))
@@ -50,8 +50,7 @@ export default function SimpleTable () {
                 table.getRowModel().rows.map(row => (
                   <tr key={row.id}>
                     {row.getVisibleCells().map((cell) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <td>
+                      <td key={cell.id}>
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </td>
                     ))}

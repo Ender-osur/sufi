@@ -1,13 +1,18 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInternetExplorer } from '@fortawesome/free-brands-svg-icons'
 import '../styles/PaginationButton.css'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function PaginationButton () {
   return (
     <div id='container-pagination'>
       <button>
-        <FontAwesomeIcon icon={faInternetExplorer} />
+        <FontAwesomeIcon icon={faAngleLeft} />
+      </button>
+      <input>
+      </input>
+      <button>
+        <FontAwesomeIcon icon={faAngleRight} />
       </button>
     </div>
   )

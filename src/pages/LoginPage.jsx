@@ -1,7 +1,13 @@
 import React from 'react'
 import '../styles/loginPage.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage () {
+  const navigate = useNavigate()
+
+  const handleLogin = () => {
+    navigate('/data')
+  }
   return (
     <>
       <div>
@@ -39,7 +45,7 @@ export default function LoginPage () {
               <input className='text-input' type='password' id='password' placeholder='contraseña' required />
             </fieldset>
           </div>
-          <button type='submit' id='btn'>
+          <button onClick={handleLogin} type='submit' id='btn'>
             <span id='btn-span'>INGRESAR</span>
           </button>
         </form>

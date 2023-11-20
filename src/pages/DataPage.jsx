@@ -10,7 +10,7 @@ export default function DataPage () {
   return (
     <div id='container-datapage'>
       <header className='container-header-nav'>
-        <nav class='navbar'>
+        <nav className='navbar'>
           <a href='#' id='container-logo'>
             <img src='src/assets/sufi_icon.png' alt='sufi icon' />
           </a>
