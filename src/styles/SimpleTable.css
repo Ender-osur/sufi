@@ -7,10 +7,29 @@
 table {
     margin: 0;
     position: absolute;
-    border-collapse: collapse;
-    border-spacing: 0;
     width: 100vw;
-    top: 100px;
-    left: 0;
-    
+}
+table thead tr {
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+}
+
+table tbody tr {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-left: 72px;
+}
+
+table tr th:nth-child(n+2):nth-child(n+5),
+table tr td:nth-child(n+2):nth-child(n+5) {
+    margin: 0;
 }

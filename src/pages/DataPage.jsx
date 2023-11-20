@@ -2,7 +2,9 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faCalendarAlt, faClose, faDownload, faSignOut } from '@fortawesome/free-solid-svg-icons'
 import '../styles/dataPage.css'
+
 import SimpleTable from '../components/SimpleTable'
+import Pagination from '../components/PaginationButton'
 
 export default function DataPage () {
   return (
@@ -54,9 +56,8 @@ export default function DataPage () {
           </div>
         </section>
       </header>
-      <main className='container-table'>
-        <SimpleTable />
-      </main>
+      <SimpleTable />
+      <Pagination />
     </div>
   )
 }
