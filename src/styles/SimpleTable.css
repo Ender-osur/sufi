@@ -1,7 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 table {
+    margin: 0;
+    position: absolute;
     border-collapse: collapse;
     border-spacing: 0;
-    background-color: aquamarine;
     width: 100vw;
-    top: 5000000vh;
+    top: 100px;
+    left: 0;
+    
 }
