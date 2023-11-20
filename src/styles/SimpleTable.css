@@ -4,8 +4,22 @@
     position: absolute;
     width: 100%;
     margin-top: calc(176px + 72px);
-    overflow: auto;
+    overflow-y: auto;
 }
+
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 500px; /* Ajusta según sea necesario */
+}
+
+table {
+    border-collapse: collapse;
+}   
+
+table thead tbody {
+    display: block;
+}
+
 table thead {
     position: absolute;
     height: 48px;
@@ -32,16 +46,15 @@ table thead tr th {
 
 table tbody {
     width: 100vw;
-    overflow: scroll;
+    overflow-y: auto;
+    max-height: 500px;
 }
 
 table tbody tr {
     color: #8E8E8E;
     height: 48px;
-}
-
-table tbody tr td {
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 table tr th:last-child,
@@ -73,4 +86,8 @@ table tr td:first-child {
 /* Color para las filas impares */
 .odd-row {
     background-color: #f7f7f7; 
-  }
+}
+
+
+
+  
