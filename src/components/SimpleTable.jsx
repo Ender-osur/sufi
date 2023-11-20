@@ -59,8 +59,8 @@ const SimpleTable = () => {
           ))}
         </thead>
         <tbody>
-          {table.getRowModel().rows.map(row => (
-            <tr key={row.id}>
+          {table.getRowModel().rows.map((row, index) => (
+            <tr key={row.id} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
               {row.getVisibleCells().map(cell => (
                 <td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>
               ))}

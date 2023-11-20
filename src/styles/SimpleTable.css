@@ -31,11 +31,13 @@ table thead tr th {
 }
 
 table tbody {
-
+    width: 100vw;
+    overflow: scroll;
 }
 
 table tbody tr {
     color: #8E8E8E;
+    height: 48px;
 }
 
 table tbody tr td {
@@ -68,3 +70,7 @@ table tr td:first-child {
     margin-left: 72px;
 }
 
+/* Color para las filas impares */
+.odd-row {
+    background-color: #f7f7f7; 
+  }
