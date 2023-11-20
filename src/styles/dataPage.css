@@ -25,6 +25,11 @@ body {
     text-decoration: none;
     display: flex;
     height: 100vh;
+    
+}
+
+header {
+    width: 100vw;
 }
 /*-------------------------------------------------------------------------*/
 /* Comienzo del estilado del navbar */
@@ -273,6 +278,6 @@ a#container-logo {
 
 
 .container-table {
-    
+    position: absolute;
 }
 
