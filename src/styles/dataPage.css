@@ -23,6 +23,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
+    display: flex;
+    height: 100vh;
 }
 /*-------------------------------------------------------------------------*/
 /* Comienzo del estilado del navbar */
@@ -146,15 +148,15 @@ a#container-logo {
     margin: 24px 12px 24px auto;
 }
 
-#icon-al, #icon-cl {
+#icon-al, #icon-cl, #icon-cal1, #icon-cal2 {
     color: var(--red_1_-dd3542);
 }
+
+#icon-al, #icon-cal1, #icon-cal2 {
+    position: absolute;
+    grid-column: 4;
+}
 /*-----------------------------*/
-
-
-
-
-
 
 
 /*-------------------------------------------------------------------------*/
@@ -173,17 +175,27 @@ a#container-logo {
     border: 1px solid #ABB9C780;
     border-radius: 6px;
     opacity: 1;
+    position: relative;
 
 }
+
 .filters:nth-child(1) {
     width: 24px;
     height: 24px;
     position: fixed;
+    left: 28px;
+    top: 192px;
+    
 }
 
 .filters:nth-child(2) {
     width: 176px;
     margin-left: 72px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
 
 .filters:nth-child(3) {
@@ -196,36 +208,71 @@ a#container-logo {
 
 .filters:nth-child(5) {
     width: 176px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
 .filters:nth-child(6) {
     width: 176px;
     margin-right: 72px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
-
 
 .filters input {
     border: 0;
-    
+    display: none;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #413E4D;
+    opacity: 1;
+    font-style: normal;
+    outline: none;
 }
 
-.filters label  {
-    top: 18px;
-    left: 20px;
+#filter-1 {
+    opacity: 1;
+    border: 0;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+}
+
+.filters label:nth-child(2) {
+    grid-column: 1;
+}
+
+.filters label:nth-child(n+2):nth-child(n-6)  {
+    position: absolute;
     color: #ABB9C7;
     opacity: 1;
     letter-spacing: 0;
     font-size: 16px;
     line-height: 22px;
     justify-self: left;
+    margin: 18px 16px 18px 16px;
 
 }
+
+.filters input:nth-child(n+2):nth-child(n-6):focus ~ .filters label:nth-child(n+2):nth-child(n-6) {
+    top: 10%;
+    font-size: 12px;
+}
+
 /*-------------------------------------------------------------------------*/
 
 
 
 
 .container-table {
-    display: none;
     
 }
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown, faCancel, faClose, faDownload, faSignOut } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faCalendarAlt, faClose, faDownload, faSignOut } from '@fortawesome/free-solid-svg-icons'
 import '../styles/dataPage.css'
+import SimpleTable from '../components/SimpleTable'
 
 export default function DataPage () {
   return (
@@ -25,7 +26,7 @@ export default function DataPage () {
         </section>
         <section className='container-filters'>
           <div className='filters'>
-            <input id='filter-1' type='button' placeholder=' ' />
+            <input id='filter-1' type='button' />
             <label htmlFor='filter-1'><FontAwesomeIcon className='icons' id='icon-cl' icon={faClose} /></label>
           </div>
           <div className='filters'>
@@ -44,45 +45,17 @@ export default function DataPage () {
           <div className='filters'>
             <input id='filter-5' type='date' placeholder=' ' />
             <label htmlFor='filter-5'>Desde</label>
+            <FontAwesomeIcon className='icons' id='icon-cal1' icon={faCalendarAlt} />
           </div>
           <div className='filters'>
             <input id='filter-6' type='date' placeholder=' ' />
             <label htmlFor='filter-6'>Hasta</label>
+            <FontAwesomeIcon className='icons' id='icon-cal2' icon={faCalendarAlt} />
           </div>
         </section>
       </header>
       <main className='container-table'>
-        <table class='table'>
-          <thead>
-            <tr>
-              <th scope='col'>Fecha y hora</th>
-              <th scope='col'>Número de desembolso</th>
-              <th scope='col'>Tipo de documento</th>
-              <th scope='col'>Número de documento</th>
-              <th scope='col'>Monto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope='row'>1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope='row'>2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope='row'>3</th>
-              <td colspan='2'>Larry the Bird</td>
-              <td>@twitter</td>
-              <td>Otto</td>
-            </tr>
-          </tbody>
-        </table>
+        <SimpleTable />
       </main>
     </div>
   )
