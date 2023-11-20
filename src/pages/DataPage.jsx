@@ -2,11 +2,17 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faCalendarAlt, faClose, faDownload, faSignOut } from '@fortawesome/free-solid-svg-icons'
 import '../styles/dataPage.css'
+import { useNavigate } from 'react-router-dom'
 
 import SimpleTable from '../components/SimpleTable'
 import Pagination from '../components/PaginationButton'
 
 export default function DataPage () {
+  const navigate = useNavigate()
+
+  const handleLogOut = () => {
+    navigate('/')
+  }
   return (
     <div id='container-datapage'>
       <header className='container-header-nav'>
@@ -14,7 +20,7 @@ export default function DataPage () {
           <a href='#' id='container-logo'>
             <img src='src/assets/sufi_icon.png' alt='sufi icon' />
           </a>
-          <a id='container-logout' href='#'>
+          <a id='container-logout' href='#' onClick={handleLogOut}>
             <span>Cerrar sesión</span>
             <FontAwesomeIcon className='icons' id='icon-lo' icon={faSignOut} />
           </a>

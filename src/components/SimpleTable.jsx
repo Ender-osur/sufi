@@ -28,7 +28,7 @@ export default function SimpleTable () {
   ]
   const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
   return (
-    <div>
+    <div id='container-table'>
       <table>
         <thead>
           {

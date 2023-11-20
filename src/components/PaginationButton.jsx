@@ -9,8 +9,13 @@ export default function PaginationButton () {
       <button>
         <FontAwesomeIcon icon={faAngleLeft} />
       </button>
-      <input>
-      </input>
+      <input
+        type='number'
+        placeholder='1'
+      />
+      <span>
+        de 10
+      </span>
       <button>
         <FontAwesomeIcon icon={faAngleRight} />
       </button>

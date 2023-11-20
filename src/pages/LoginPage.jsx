@@ -8,6 +8,9 @@ export default function LoginPage () {
   const handleLogin = () => {
     navigate('/data')
   }
+  const handleRegister = () => {
+    navigate('/register')
+  }
   return (
     <>
       <div>
@@ -36,20 +39,32 @@ export default function LoginPage () {
               <label htmlFor='username' className='label-form'>
                 Usuario
               </label>
-              <input className='text-input' type='email' id='username' placeholder='mail@usermail.com' required />
+              <input
+                className='text-input'
+                type='email'
+                id='username'
+                placeholder='mail@usermail.com'
+                required
+              />
             </fieldset>
             <fieldset className='input-field' id='password-field'>
               <label htmlFor='password' className='label-form'>
                 Contraseña
               </label>
-              <input className='text-input' type='password' id='password' placeholder='contraseña' required />
+              <input
+                className='text-input'
+                type='password'
+                id='password'
+                placeholder='contraseña'
+                required
+              />
             </fieldset>
           </div>
           <button onClick={handleLogin} type='submit' id='btn'>
             <span id='btn-span'>INGRESAR</span>
           </button>
         </form>
-        <a href='#' id='recovery-field'>
+        <a href='#' id='recovery-field' onClick={handleRegister}>
           No recuerdo mi contraseña
         </a>
       </main>

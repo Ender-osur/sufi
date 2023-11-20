@@ -1,20 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-table {
+#container-table {
     margin: 0;
     position: absolute;
-    width: 100vw;
+    width: 100%;
+    margin-top: calc(176px + 72px);
 }
 table thead tr {
-    grid-row: 1;
     display: flex;
     justify-content: space-between;
     height: 48px;
     align-items: center;
+    text-align: left;
 }
 
 table tbody tr {
@@ -24,6 +20,11 @@ table tbody tr {
     align-items: center;
     color: #8E8E8E;
     
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-left: 72px;
 }
 
 table tr th:first-child,
