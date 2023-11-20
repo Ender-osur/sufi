@@ -28,7 +28,12 @@ body {
     
 }
 
+.container-datapage {
+    display: flex;
+}
+
 header {
+    position: relative;
     width: 100vw;
 }
 /*-------------------------------------------------------------------------*/
@@ -275,9 +280,8 @@ a#container-logo {
 /*-------------------------------------------------------------------------*/
 
 
-
-
-.container-table {
-    position: absolute;
+main {
+    position: relative;
+    width: 100vw;
 }
 

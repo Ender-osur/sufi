@@ -1,49 +1,64 @@
 import React from 'react'
-import { useReactTable } from '@tanstack/react-table'
+import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
 import data from '../data/MOCK_DATA.json'
+import '../styles/SimpleTable.css'
 
 export default function SimpleTable () {
   const columns = [
     {
       header: 'Fecha y hora',
-      accessorkey: 'date'
+      accessorKey: 'date'
     },
     {
       header: 'Número de reembolso',
-      accessorkey: 'number'
+      accessorKey: 'number'
     },
     {
       header: 'Tipo de documento',
-      accessorkey: 'type'
+      accessorKey: 'type'
     },
     {
       header: 'Número de documento',
-      accessorkey: 'numberid'
+      accessorKey: 'numberid'
     },
     {
       header: 'Monto',
-      accessorkey: 'amount'
+      accessorKey: 'amount'
     }
   ]
-  const table = useReactTable({ data, columns})
+  const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
   return (
     <div>
       <table>
         <thead>
-            {
+          {
                 table.getHeaderGroups().map(headerGroup => (
-                    <tr key={headerGroup.date} >
-                        {
+                  <tr key={headerGroup.date}>
+                    {
                             headerGroup.headers.map(header => (
-                                <th key={header.date}>
-                                    {header.column.columnDef.header}
-                                </th>
+                              <th key={header.date}>
+                                {flexRender(header.column.columnDef.header, header.getContext())}
+                              </th>
                             ))
                         }
-                    </tr>
+                  </tr>
                 ))
             }
         </thead>
+        <tbody>
+          {
+                table.getRowModel().rows.map(row => (
+                  <tr key={row.id}>
+                    {row.getVisibleCells().map((cell) => (
+                      // eslint-disable-next-line react/jsx-key
+                      <td>
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </td>
+                    ))}
+                  </tr>
+                ))
+            }
+        </tbody>
       </table>
     </div>
   )
