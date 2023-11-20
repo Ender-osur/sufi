@@ -1,16 +1,32 @@
 /* RegisterPage.css */
-.register-container {
+.container-register {
+
+    position: fixed;
     max-width: 400px;
-    margin: 50px auto;
+    margin: auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-  }
-  
-  .register-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    height: 80vh;
+  }
+  
+  .container-register h2 {
+    position: absolute;
+    top: 10vh;
+  }
+
+  .register-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20vh;
+
   }
   
   .form-group {
