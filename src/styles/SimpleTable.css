@@ -4,6 +4,7 @@
     position: absolute;
     width: 100%;
     margin-top: calc(176px + 72px);
+    overflow: auto;
 }
 table thead {
     position: absolute;
@@ -15,24 +16,51 @@ table thead {
 
 table thead tr {
     position: absolute;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 16px;
+    text-align: left;
+}
+
+table thead tr th {
+    height: 100%;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+table tbody {
+
 }
 
 table tbody tr {
-    height: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: #8E8E8E;
-    
+}
+
+table tbody tr td {
+
 }
 
 table tr th:last-child,
 table tr td:last-child {
-    margin-left: 72px;
+    margin-right: 24px;
+}
+
+table thead tr th:nth-child(1), table tbody tr td:nth-child(1) {
+    width: 21.56vw;
+}
+table thead tr th:nth-child(2), table tbody tr td:nth-child(2) {
+    width: 18.75vw;
+}
+table thead tr th:nth-child(3), table tbody tr td:nth-child(3) {
+    width: 18.44vw;
+}
+table thead tr th:nth-child(4), table tbody tr td:nth-child(4) {
+    width: 20vw;
+}
+table thead tr th:nth-child(5), table tbody tr td:nth-child(5) {
+    width: 13.75vw;
 }
 
 table tr th:first-child,
@@ -40,7 +68,3 @@ table tr td:first-child {
     margin-left: 72px;
 }
 
-table tr th:nth-child(n+2):nth-child(n+5),
-table tr td:nth-child(n+2):nth-child(n+5) {
-    margin: 24px;
-}

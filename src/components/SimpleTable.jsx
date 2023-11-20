@@ -23,7 +23,6 @@ const SimpleTable = () => {
           numberid: 'Número de Documento',
           amount: 'Monto'
         }
-
         // Haciendo las columnas con los encabezados personalizados
         const customColumns = Object.keys(customHeaders).map(key => ({
           header: customHeaders[key],

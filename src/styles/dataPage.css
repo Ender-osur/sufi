@@ -170,6 +170,7 @@ a#container-logo {
     position: fixed;
     left: 28px;
     top: 192px;
+    opacity: 1;
 }
 
 #icon-al, #icon-cal1, #icon-cal2 {
@@ -205,6 +206,7 @@ a#container-logo {
     position: fixed;
     left: 28px;
     top: 192px;
+    border: 0;
     
 }
 
