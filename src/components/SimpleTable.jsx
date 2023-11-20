@@ -1,64 +1,75 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-table'
-import data from '../data/MOCK_DATA.json'
-import '../styles/SimpleTable.css'
+import { API_DATA } from '../utils/Constants'
 
-export default function SimpleTable () {
-  const columns = [
-    {
-      header: 'Fecha y hora',
-      accessorKey: 'date'
-    },
-    {
-      header: 'Número de reembolso',
-      accessorKey: 'number'
-    },
-    {
-      header: 'Tipo de documento',
-      accessorKey: 'type'
-    },
-    {
-      header: 'Número de documento',
-      accessorKey: 'numberid'
-    },
-    {
-      header: 'Monto',
-      accessorKey: 'amount'
+const SimpleTable = () => {
+  // Hooks
+  const [columns, setColumns] = useState([])
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    const fetchTableData = async () => {
+      try {
+        // Realizar el fetch directamente aquí
+        const response = await fetch(API_DATA)
+        const apiData = await response.json()
+
+        // Encabezados personalizados
+        const customHeaders = {
+          date: 'Fecha y hora',
+          number: 'Número de Reembolso',
+          type: 'Tipo de Documento',
+          numberid: 'Número de Documento',
+          amount: 'Monto'
+        }
+
+        // Haciendo las columnas con los encabezados personalizados
+        const customColumns = Object.keys(customHeaders).map(key => ({
+          header: customHeaders[key],
+          accessorKey: key
+        }))
+
+        // Actualizando estado con las columnas construidas y los datos del fetch
+        setColumns(customColumns)
+        setData(apiData)
+      } catch (error) {
+        console.error('Error al obtener datos:', error)
+      }
     }
-  ]
-  const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
+
+    fetchTableData()
+  }, [])
+
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel()
+  })
+
   return (
     <div id='container-table'>
       <table>
         <thead>
-          {
-                table.getHeaderGroups().map(headerGroup => (
-                  <tr key={headerGroup.date}>
-                    {
-                            headerGroup.headers.map(header => (
-                              <th key={header.id}>
-                                {flexRender(header.column.columnDef.header, header.getContext())}
-                              </th>
-                            ))
-                        }
-                  </tr>
-                ))
-            }
+          {table.getHeaderGroups().map(headerGroup => (
+            <tr key={headerGroup.id}>
+              {headerGroup.headers.map(header => (
+                <th key={header.id}>{flexRender(header.column.columnDef.header, header.getContext())}</th>
+              ))}
+            </tr>
+          ))}
         </thead>
         <tbody>
-          {
-                table.getRowModel().rows.map(row => (
-                  <tr key={row.id}>
-                    {row.getVisibleCells().map((cell) => (
-                      <td key={cell.id}>
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                      </td>
-                    ))}
-                  </tr>
-                ))
-            }
+          {table.getRowModel().rows.map(row => (
+            <tr key={row.id}>
+              {row.getVisibleCells().map(cell => (
+                <td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>
+              ))}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
   )
 }
+
+export default SimpleTable

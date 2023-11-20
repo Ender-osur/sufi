@@ -1,7 +1,13 @@
 import React from 'react'
 import '../styles/RegisterPage.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function RegisterPage () {
+  const navigate = useNavigate()
+
+  const handleReturn = () => {
+    navigate('/')
+  }
   return (
     <>
       <div>
@@ -33,6 +39,9 @@ export default function RegisterPage () {
           </div>
           <button type='submit' className='register-button'>
             Registrarse
+          </button>
+          <button type='button' className='cancel-button' onClick={handleReturn}>
+            Cancelar
           </button>
         </form>
       </div>

@@ -1,33 +1,29 @@
-/* RegisterPage.css */
 .container-register {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    position: fixed;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    inset: 0;
-    height: 80vh;
-  }
-  
-  .container-register h2 {
-    position: absolute;
-    top: 10vh;
-  }
+.container-register h2 {
+  margin-top: 0;
+}
 
-  .register-form {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 20vh;
-
-  }
+.register-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
   
   .form-group {
     margin-bottom: 20px;
@@ -47,7 +43,7 @@
     margin-top: 6px;
   }
   
-  .register-button {
+  .register-button, .cancel-button {
     background-color: #DD3542;
     color: #fff;
     padding: 12px;
@@ -57,7 +53,10 @@
     font-size: 16px;
   }
   
-  .register-button:hover {
+  .register-button:hover, .cancel-button:hover {
     background-color: #aa2a35;
   }
   
+  .cancel-button {
+    margin-top: 15px;
+  }
